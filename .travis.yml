@@ -1,19 +1,15 @@
-
 language: node_js
-node_js:
-  - '10'
-dist: trusty
 sudo: required
+before_script:
+  - npm install -g polymer-cli
+  - polymer install
+node_js: stable
 addons:
   firefox: latest
-  chrome: stable
-cache:
-  directories:
-    - node_modules
-install:
-  - npm install
-before_script:
-  - npm run lint
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 script:
   - xvfb-run npm run test
-  - xvfb-run npm run test:integration
