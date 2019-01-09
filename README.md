@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/jusolete/music-component3.svg?branch=master)](https://travis-ci.com/jusolete/music-component3)
 # \<music-component\>
 <!--
 ```
