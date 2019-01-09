@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/wct.cmd",
+    "test": "./node_modules/.bin/_mocha",
     "coverage": "open coverage/lcov-report/index.html"
   },
   "repository": {
@@ -31,7 +31,6 @@
     "@polymer/paper-slider": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "music-list-component": "git+https://github.com/jusolete/music-list-component3.git#master"
-    
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
