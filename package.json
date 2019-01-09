@@ -1,0 +1,19 @@
+{
+  "name": "music-component",
+  "main": "music-component.js",
+  "dependencies": {
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-input": "^3.0.1",
+    "@polymer/paper-slider": "^3.0.1",
+    "@polymer/polymer": "^3.0.0",
+    "music-list-component": "git+https://github.com/jusolete/music-list-component3.git#master"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wct-mocha": "^1.0.0"
+  }
+}
