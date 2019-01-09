@@ -7,8 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/_mocha",
-    "coverage": "open coverage/lcov-report/index.html"
+    "test": "polymer test"
   },
   "repository": {
     "type": "git",
