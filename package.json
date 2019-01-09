@@ -31,6 +31,7 @@
     "@polymer/paper-slider": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "music-list-component": "git+https://github.com/jusolete/music-list-component3.git#master"
+    
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
@@ -39,6 +40,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "wct-mocha": "^1.0.0",
-    "@polymer/iron-component-page": "^4.0.1"
+    "@polymer/iron-component-page": "^4.0.1",
+    "web-component-tester": "^6.9.2"
   }
 }
