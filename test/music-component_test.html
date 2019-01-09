@@ -16,39 +16,77 @@
   </head>
   <body>
 
-    <test-fixture id="BasicTestFixture">
-      <template>
-        <music-component></music-component>
-      </template>
-    </test-fixture>
-
-    <test-fixture id="ChangedPropertyTestFixture">
-      <template>
-        <music-component prop1="new-prop1"></music-component>
-      </template>
-    </test-fixture>
+      <test-fixture id="song-playing">
+          <template>
+            <music-component></music-component>
+          </template>
+        </test-fixture>
+    
+        <test-fixture id="song-paused">
+          <template>
+              <music-component track-url="https://music-server-jansolote.herokuapp.com/track/song"></music-component>
+          </template>
+        </test-fixture>
+    
+        <test-fixture id="volume-test">
+           <template>
+           <music-component volume="0.50"></music-component>
+          </template>
+        </test-fixture>
 
     <script type="module">
-      suite('music-component', () => {
+      suite("music-plays",()=>{
+         test("song is playing",(done)=>{
+           let musicComponent=fixture("song-playing");
+           let song="song"
+           musicComponent.addEventListener("song-playing",(event)=>{
+              assert.equal(`https://music-server-jansolote.herokuapp.com/track/${song}`,`https://music-server-jansolote.herokuapp.com/track/${song}`);
+              assert.equal(musicComponent.songDuration,0);
+              done();
+           });
+           musicComponent.selectSong({detail:{
+             songUrl:"song-url",
+             duration:60
+           }});
+         });
+       });
 
-        test('instantiating the element with default properties works', () => {
-          const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'music-component');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello music-component!');
-        });
+       suite("music-paused",()=>{
+         test("song is paused",(done)=>{
+           let musicComponent=fixture("song-paused");
+           let player=musicComponent.shadowRoot.querySelector("#musicPlayer");
+           player.currentTime=60;
 
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
-        });
+           musicComponent.addEventListener("song-paused",(event)=>{
+              assert.equal(player.currentTime,60);
+              assert.equal(musicComponent.trackUrl,"https://music-server-jansolote.herokuapp.com/track/song")
+              done();
+           });
+           musicComponent.pauseSong();
+         });
+       });
 
-      });
+       suite("volume-changed",()=>{
+          test("volume has increased",(done)=>{
+            	let musicComponent=fixture("volume-test")
+              musicComponent.addEventListener("volume-changed",(event)=>{
+                  assert.equal(musicComponent.volume,0.60);
+                  done();
+              });
+              musicComponent.increaseVolume();
+          });
+          
+          test("volume has decreased",(done)=>{
+            	let musicComponent=fixture("volume-test")
+              musicComponent.addEventListener("volume-changed",(event)=>{
+                  assert.equal(musicComponent.volume,0.40);
+                  done();
+              });
+              musicComponent.decreaseVolume();
+          });
+
+
+       });
     </script>
 
   </body>
