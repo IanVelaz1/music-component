@@ -14,9 +14,6 @@
 <music-component></music-component>
 ```
 
-## Install bower
-npm i bower
-
 ## Run npm install
 
 ```
