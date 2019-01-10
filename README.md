@@ -4,7 +4,9 @@
 ```
 <custom-element-demo>
   <template>
-  <script type="module" src="./music-component.js"></script>
+  <script type="module">
+    import './music-component.js';
+  </script>
     <music-component list-request-url="https://music-server-jansolote.herokuapp.com/tracks" song-url="https://music-server-jansolote.herokuapp.com/track/"></music-component>
   </template>
 </custom-element-demo>
