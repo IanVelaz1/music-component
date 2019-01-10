@@ -12,37 +12,37 @@ import "@polymer/paper-slider/paper-slider.js"
 |     Properties    | value (default) |                              description                              |
 |-----------------|-----------------|---------------------------------------------------------------------|
 |       paused      |      false      |                defines wether the song is paused or not               |
-*      songUrl      |        ""       |                  determines the direction of the song                 |
-*    songDuration   |        0        |           its set to be the duration of the song in seconds           |
-*    startingTime   |        0        |       determines the starting position of the song (in seconds)       |
-* songProgress      |        0        |                     current progresss of the song                     |
-*       volume      |        0        |               determines the volume of the audio player               |
-*   searchArgument  |        ""       |            search String (used with search-song component)            |
-*     hiddenList    |       true      |              hide the list of songs(song-list component)              |
-*      songName     |        ""       |                    name of the song to be displayed                   |
-*   listRequestUrl  |        ""       |         url of the songs list (used with song-list component)         |
-*      trackUrl     |        ""       | specific song request direction (combination of songUrl and songName) |
-* invisibleControls |      false      |               determines the visibility of the controls              
+* |     songUrl      |        ""       |                  determines the direction of the song                 |
+* |   songDuration   |        0        |           its set to be the duration of the song in seconds           |
+* |   startingTime   |        0        |       determines the starting position of the song (in seconds)       |
+* | songProgress      |        0        |                     current progresss of the song                     |
+* |      volume      |        0        |               determines the volume of the audio player               |
+* |  searchArgument  |        ""       |            search String (used with search-song component)            |
+* |    hiddenList    |       true      |              hide the list of songs(song-list component)              |
+* |     songName     |        ""       |                    name of the song to be displayed                   |
+* |  listRequestUrl  |        ""       |         url of the songs list (used with song-list component)         |
+* |     trackUrl     |        ""       | specific song request direction (combination of songUrl and songName) |
+* | invisibleControls |      false      |               determines the visibility of the controls              | 
 
 * ### Events
-*  `song-playing     | only fires when the song is playing`   
-* ------------------|-----------------------------------------
-* `song-paused      | only fires once the song is paused`  
-* `slider-clicked   | fires when the time slider is clicked `
-* `dragging-changed | fires once the slider finishes dragging`
-* `volume-changed   | fires when the volume is changed`      
+*  | song-playing     | only fires when the song is playing | 
+*  |-----------------|-----------------------------------------|
+*  | song-paused      | only fires once the song is paused |   
+*  | slider-clicked   | fires when the time slider is clicked |
+*  | dragging-changed | fires once the slider finishes dragging |
+*  | volume-changed   | fires when the volume is changed | 
 
 * ### Styling
 
-*         Variable name          |   Type   |                   Used                   
-*  -------------------------------|----------|-----------------------------------------
-* `     --music-player-component    |   Mixin  |     host styling of the music player     * `
-* `     --music-controls-buttons    |   Mixin  |          Control buttons styling         `
-* `    --music-control-button-ink   | Variable |  Effect of control buttons once clicked  `
-* `     --player-container-style    |   Mixin  |   styling of the music player container  `
-* ` --player-button-container-style |   Mixin  | Stilyng of the control buttons container `
-* `       --music-slider-color      | Variable | color of the progress and volume sliders `
-* `    --music-slider-knob-color    | Variable |         color of the sliders knob        `
+*   |      Variable name          |   Type   |                   Used                   
+*   |-----------------------------|----------|-----------------------------------------|
+*  |    --music-player-component |   Mixin  |     host styling of the music player   | 
+*  |    --music-controls-buttons |   Mixin  |          Control buttons styling        | 
+*  |  --music-control-button-ink | Variable |  Effect of control buttons once clicked | 
+*  |    --player-container-style |   Mixin  |   styling of the music player container | 
+*  |--player-button-container-style |   Mixin  | Stilyng of the control buttons container | 
+*  |     --music-slider-color    | Variable | color of the progress and volume sliders | 
+*  |   --music-slider-knob-color | Variable |         color of the sliders knob       | 
 * @customElement
 * @polymer
 * @demo demo/index.html
