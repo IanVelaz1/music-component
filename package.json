@@ -1,6 +1,6 @@
 {
   "name": "music-component",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "mini web music player",
   "main": "music-component.js",
   "directories": {
