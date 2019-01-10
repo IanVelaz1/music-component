@@ -9,6 +9,9 @@
   </template>
 </custom-element-demo>
 ```
+```html
+<music-component></music-component>
+```
 -->
 
 
