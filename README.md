@@ -4,15 +4,13 @@
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="music-component.html">
+    <link rel="import" href="./music-component.html">
     <music-component></music-component>
   </template>
 </custom-element-demo>
 ```
 -->
-```html
-<music-component></music-component>
-```
+
 
 ## Run npm install
 
