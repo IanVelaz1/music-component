@@ -17,10 +17,10 @@
 ## Install bower
 npm i bower
 
-## Run bower install
+## Run npm install
 
 ```
-$ bower install
+$ npm install
 ```
 
 ## Properties
